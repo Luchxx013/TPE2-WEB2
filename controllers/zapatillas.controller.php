@@ -32,4 +32,21 @@ class ZapatillasController {
     
         header("Location: " . BASE_URL);
     }
+
+    function AbrirMenuEdicion($id){
+        $zapatillas = $this->model->ObtenerSneakers($id);
+        $this->view->EditarSneakers($id, $zapatillas->marca, $zapatillas->modelo, $zapatillas->color, $zapatillas->talle);
+    }
+
+    function EditarSneakers() {
+        $id = $_REQUEST['id'];
+        $marca = $_REQUEST['marca'];
+        $modelo = $_REQUEST['modelo'];
+        $color = $_REQUEST['color'];
+        $talle = $_REQUEST['talle'];
+
+        $this->model->ModificarSneakers($marca, $modelo, $color, $talle, $id);
+
+        header("Location: " . BASE_URL);  
+    }
 }
