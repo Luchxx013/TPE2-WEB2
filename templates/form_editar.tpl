@@ -34,12 +34,12 @@
         <div class="form-group">
             <label>Talle:</label>
                 <select name="talle" class="form-control">
-                    <option value="6">6us</option>
-                    <option value="7">7us</option>
-                    <option value="8">8us</option>
-                    <option value="9">9us</option>
-                    <option value="10">10us</option>
-                    <option value="11">11us</option>
+                    <option value="6" {if $talle eq 6}selected{/if}>6us</option>
+                    <option value="7" {if $talle eq 7}selected{/if}>7us</option>
+                    <option value="8" {if $talle eq 8}selected{/if}>8us</option>
+                    <option value="9" {if $talle eq 9}selected{/if}>9us</option>
+                    <option value="10" {if $talle eq 10}selected{/if}>10us</option>
+                    <option value="11" {if $talle eq 11}selected{/if}>11us</option>
                 </select>
             </div>
         </div>
